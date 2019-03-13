@@ -6,13 +6,10 @@ var productBlock = document.querySelectorAll('.product-box__item'),
     filterItems = document.querySelectorAll('option');
 
 function addEvent(elems, type, handler){
-  if(elems.addEventListener){
-    elems.addEventListener(type, handler);
-  }
-  return false;
+  elems.addEventListener(type, handler);
 }
 
-for(var j = 0; j < productBlock.length; j++){
+for(var j = 0; j < filter.length; j++){
   addEvent(filter[j], 'change', changeCategory);
 }
 
